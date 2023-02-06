@@ -3,7 +3,7 @@
     Created on : 24-Jan-2023, 6:25:56 PM
     Author     : darkn
 --%>
-
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,5 +18,8 @@
                 Last name : <input type ="text" name ="lastname" value ="${lastname}"> <br>
                 <input type="submit" value="Submit">
         </form>
+                <c:if test="${invalid == true}">
+                <p> Invalid entry. Please enter both your first and last names. </p>
+                </c:if>
     </body>
 </html>
